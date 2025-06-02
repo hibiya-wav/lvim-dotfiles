@@ -10,6 +10,7 @@ vim.opt.clipboard = "unnamedplus"
 lvim.colorscheme = "gruvbox"
 lvim.keys.normal_mode["<leader>u"] = ":UndotreeToggle<return>"
 lvim.keys.normal_mode["<leader>z"] = ":ZenMode<return>"
+lvim.keys.normal_mode["<leader>rp"] = ":terminal<return>i"
 
 lvim.plugins = {
 
@@ -45,3 +46,11 @@ lvim.plugins = {
     }
   }
 }
+
+require("null-ls").setup({
+  sources = {
+    require("null-ls").builtins.formatting.prettier.with({
+      extra_filetypes = { "markdown" },
+    }),
+  },
+})
