@@ -1,34 +1,42 @@
-[shell]
-program = "/usr/bin/bash"
+[terminal.shell]
+program = "/opt/homebrew/bin/bash"
 args = ["-l", "-c", "tmux attach || tmux"]
 
 [window]
-opacity = 0.85
+opacity = 0.9
 
 [colors.primary]
-# hard contrast background = = '#1d2021'
-background = '#282828'
-# soft contrast background = = '#32302f'
-foreground = '#ebdbb2'
+foreground = "#dcd7ba"
+background = "#1f1f28"
 
-# Normal colors
+[colors.cursor]
+text = "#1f1f28"
+cursor = "#dcd7ba"
+
+[colors.selection]
+text = "#c8c093"
+background = "#2d4f67"
+
 [colors.normal]
-black   = '#282828'
-red     = '#cc241d'
-green   = '#98971a'
-yellow  = '#d79921'
-blue    = '#458588'
-magenta = '#b16286'
-cyan    = '#689d6a'
-white   = '#a89984'
+black = "#16161d"
+red = "#c34043"
+green = "#76946a"
+yellow = "#c0a36e"
+blue = "#7e9cd8"
+magenta = "#957fb8"
+cyan = "#6a9589"
+white = "#c8c093"
 
-# Bright colors
 [colors.bright]
-black   = '#928374'
-red     = '#fb4934'
-green   = '#b8bb26'
-yellow  = '#fabd2f'
-blue    = '#83a598'
-magenta = '#d3869b'
-cyan    = '#8ec07c'
-white   = '#ebdbb2'
+black = "#727169"
+red = "#e82424"
+green = "#98bb6c"
+yellow = "#e6c384"
+blue = "#7fb4ca"
+magenta = "#938aa9"
+cyan = "#7aa89f"
+white = "#dcd7ba"
+
+[font]
+size = 14.0
+normal = { family = "DejaVuSansM Nerd Font Mono" }

@@ -7,14 +7,26 @@
 
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
-lvim.colorscheme = "gruvbox"
+-- lvim.colorscheme = "rose-pine-moon"
+lvim.colorscheme = "kanagawa-wave"
 lvim.keys.normal_mode["<leader>u"] = ":UndotreeToggle<return>"
 lvim.keys.normal_mode["<leader>z"] = ":ZenMode<return>"
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Terminal",
+  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
+  v = { "<cmd>2ToggleTerm size=75 direction=vertical<cr>", "Split vertical" },
+  h = { "<cmd>2ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal" },
+}
+
 lvim.keys.normal_mode["<leader>rp"] = ":terminal<return>i"
 
 lvim.plugins = {
 
   { "ellisonleao/gruvbox.nvim" },
+  {"mfussenegger/nvim-jdtls"},
+  {"rose-pine/neovim"},
+  {"vague2k/vague.nvim"},
+  {"rebelot/kanagawa.nvim"},
   {
     "windwp/nvim-ts-autotag",
     config = function()
@@ -46,11 +58,3 @@ lvim.plugins = {
     }
   }
 }
-
-require("null-ls").setup({
-  sources = {
-    require("null-ls").builtins.formatting.prettier.with({
-      extra_filetypes = { "markdown" },
-    }),
-  },
-})
