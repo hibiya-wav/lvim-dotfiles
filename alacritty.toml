@@ -1,5 +1,5 @@
 [terminal.shell]
-program = "/opt/homebrew/bin/bash"
+program = "/usr/bin/bash"
 args = ["-l", "-c", "tmux attach || tmux"]
 
 [window]
@@ -37,6 +37,6 @@ magenta = "#938aa9"
 cyan = "#7aa89f"
 white = "#dcd7ba"
 
-[font]
-size = 14.0
-normal = { family = "DejaVuSansM Nerd Font Mono" }
+# [font]
+# size = 14.0
+# normal = { family = "DejaVuSansM Nerd Font Mono" }
