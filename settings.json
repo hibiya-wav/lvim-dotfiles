@@ -1,0 +1,122 @@
+{
+  "editor.fontSize": 13,
+  "java.maven.downloadSources": true,
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "icons",
+  "terminal.integrated.fontSize": 13,
+  "editor.bracketPairColorization.enabled": false,
+  "workbench.colorTheme": "Osaka Solarized Pro Monokai Storm",
+  "chat.commandCenter.enabled": false,
+
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Format code
+    {
+      "before": ["<leader>", "b", "n"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<leader>", "b", "b"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // Search through text
+    {
+      "before": ["<leader>", "s", "t"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    // Search for a file
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Hide all windows other than main text
+    {
+      "before": ["<leader>", "h"],
+      "commands": [
+        "workbench.action.closeEditorsInOtherGroups",
+        "workbench.action.closePanel",
+        "workbench.action.closeSidebar"
+      ]
+    },
+    // Run code
+    {
+      "before": ["<leader>", "r"],
+      "commands": ["workbench.action.debug.run"]
+    },
+    // Stop running code
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.debug.stop"]
+    },
+    // Place breakpoint
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"]
+    },
+    // Activate debug procedure
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    // Show quick documentation (hover) | show error descriptions
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    // Go to definition/declaration
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    // Find all references/usages
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
+    },
+    // New terminal (horizontal split)
+    {
+      "before": ["<leader>", "t", "h"],
+      "commands": ["workbench.action.terminal.new"]
+    },
+    // New terminal tab (with other coding tabs)
+    {
+      "before": ["<leader>", "t", "t"],
+      "commands": ["workbench.action.createTerminalEditor"]
+    },
+    // Open file tree (Explorer)
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    // Open Spring Boot dashboard (if extension installed)
+    {
+      "before": ["<leader>", "s", "b"],
+      "commands": ["workbench.view.extension.spring"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    }
+  ],
+  // "terminal.integrated.defaultProfile.linux": "tmux",
+  "terminal.integrated.profiles.osx": {
+    "bash": null,
+    "tmux": {
+      "path": "bash",
+      "args": ["-c", "tmux new -ADs ${PWD##*/}"],
+      "icon": "terminal-tmux"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "tmux",
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.smartRelativeLine": true,
+  "workbench.editor.enablePreview": false
+}
+
