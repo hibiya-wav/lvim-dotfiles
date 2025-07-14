@@ -49,14 +49,14 @@
   // Keep 8 lines visible above and below the cursor when scrolling
   "editor.cursorSurroundingLines": 8,
   // Enable smooth scrolling animation
-  "editor.smoothScrolling": true,
+  // "editor.smoothScrolling": false,
   // Configure minimap for better performance and visibility
-  "editor.minimap.renderCharacters": false,
-  "editor.minimap.scale": 2,
+  // "editor.minimap.renderCharacters": false,
+  // "editor.minimap.scale": 2,
 
   // Vim Configuration
   // Enable easymotion plugin for quick navigation
-  "vim.easymotion": true,
+  // "vim.easymotion": true,
   // Enable incremental search highlighting
   "vim.incsearch": true,
   // Use system clipboard for vim operations
@@ -68,11 +68,11 @@
   // Set space as the leader key
   "vim.leader": " ",
   // Enable vim-sneak plugin for improved motion
-  "vim.sneak": true,
+  // "vim.sneak": true,
   // Use relative line numbers in normal mode
-  "vim.smartRelativeLine": true,
+  // "vim.smartRelativeLine": true,
   // Fix common fold-related issues
-  "vim.foldfix": true,
+  // "vim.foldfix": true,
   // Enable and configure yank highlighting
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 200,
@@ -293,5 +293,8 @@
       "commands": ["editor.action.transformToLowercase"]
     }
   ],
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
