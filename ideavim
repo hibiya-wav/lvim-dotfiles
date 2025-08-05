@@ -9,6 +9,7 @@ let mapleader=" "
 :set relativenumber
 set clipboard+=unnamed
 set clipboard+=ideaput
+set scrolloff=8
 set NERDTree
 
 
