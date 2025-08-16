@@ -1,5 +1,5 @@
 [terminal.shell]
-program = "/opt/homebrew/bin/bash"
+program = "/usr/bin/bash"
 args = ["-l", "-c", "tmux attach || tmux"]
 
 [window]
