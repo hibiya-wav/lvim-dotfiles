@@ -566,9 +566,22 @@
             "scrollbarSlider.activeBackground": "#5C677377",
             "editorHoverWidget.background": "#2B2D30",
             "editorHoverWidget.border": "#3B3E43",
-            "list.hoverBackground": "#2E3033",
-            "list.inactiveSelectionBackground": "#2E3033",
-            "list.activeSelectionBackground": "#323438"
+            // "list.hoverBackground": "#2E3033",
+            // "list.inactiveSelectionBackground": "#2E3033",
+            // "list.activeSelectionBackground": "#323438"
+            // File Explorer focus and selection colors
+            "list.focusBackground": "#323438", // Background when navigating with hjkl/arrows
+            "list.focusForeground": "#FFFFFF", // Text color for focused item
+            "list.focusOutline": "#3D7EFF", // Subtle outline around focused item
+            "list.activeSelectionBackground": "#3D7EFF22", // Background when item is selected (clicked)
+            "list.activeSelectionForeground": "#FFFFFF", // Text color for selected item
+            "list.inactiveSelectionBackground": "#323438", // Background when explorer loses focus
+            "list.inactiveSelectionForeground": "#C8CDD0", // Text color when explorer inactive
+            "list.hoverBackground": "#2E3033", // Background when hovering with mouse
+            "list.hoverForeground": "#FFFFFF", // Text color on hover
+            // Additional tree-specific colors for better visibility
+            "tree.indentGuidesStroke": "#5C6773", // Indent guide lines
+            "list.highlightForeground": "#3D7EFF" // Search highlight color in explorer
         }
     }
 }
