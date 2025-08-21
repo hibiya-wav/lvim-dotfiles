@@ -18,7 +18,7 @@
     },
     "terminal.integrated.defaultProfile.osx": "bash (2)",
     "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "workbench.editor.enablePreview": false,
     "[markdown]": {
@@ -493,5 +493,82 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Default Light Modern"
+    "custom-ui-style.font.monospace": "JetBrains Mono",
+    "workbench.iconTheme": "icons",
+    "workbench.colorTheme": "Darcula (IntelliJ)",
+    //   "workbench.colorCustomizations": {
+    //     "[Darcula (IntelliJ)]": {
+    //       "editor.background": "#1A1B1E", // Darker editor background for a modern feel
+    //       "sideBar.background": "#1E1E1E", // Uniform sidebar to reduce clutter
+    //       "activityBar.background": "#1A1B1E", // Matches the cooler, deeper tone
+    //       "statusBar.background": "#1A1B1E", // Bottom bar for consistency
+    //       "titleBar.activeBackground": "#1E1E1E", // Top bar when focused
+    //       "titleBar.inactiveBackground": "#252526", // Slightly lighter when inactive
+    //       "tab.activeBackground": "#1A1B1E", // Active tab blending
+    //       "tab.inactiveBackground": "#252526" // Inactive tabs with subtle contrast
+    //     }
+    //   }
+    "workbench.colorCustomizations": {
+        "[Darcula (IntelliJ)]": {
+            // Editor and gutter
+            "editor.background": "#1E1F22",
+            "editorLineNumber.foreground": "#5C6773",
+            "editorLineNumber.activeForeground": "#A8ADAF",
+            "editorGutter.background": "#1E1F22",
+            // Sidebar and activity bar (left chrome)
+            "sideBar.background": "#2B2D30",
+            "sideBar.foreground": "#C8CDD0",
+            "sideBar.border": "#3B3E43",
+            "activityBar.background": "#2B2D30",
+            "activityBar.foreground": "#C8CDD0",
+            "activityBar.inactiveForeground": "#8D9399",
+            "activityBar.border": "#3B3E43",
+            "activityBarBadge.background": "#3D7EFF",
+            "activityBarBadge.foreground": "#FFFFFF",
+            // Tabs
+            "tab.activeBackground": "#2B2D30",
+            "tab.inactiveBackground": "#1E1F22",
+            "tab.activeForeground": "#FFFFFF",
+            "tab.inactiveForeground": "#A8ADAF",
+            "tab.border": "#3B3E43",
+            "tab.activeBorderTop": "#3D7EFF",
+            "tab.hoverBackground": "#323438",
+            // Title bar (top)
+            "titleBar.activeBackground": "#2B2D30",
+            "titleBar.inactiveBackground": "#26272A",
+            "titleBar.activeForeground": "#C8CDD0",
+            "titleBar.inactiveForeground": "#9AA0A6",
+            "titleBar.border": "#3B3E43",
+            // Status bar (bottom)
+            "statusBar.background": "#2B2D30",
+            "statusBar.foreground": "#C8CDD0",
+            "statusBar.noFolderBackground": "#2B2D30",
+            "statusBar.debuggingBackground": "#2B2D30",
+            // "statusBar.debuggingForeground": "#FFFFFF",
+            "statusBar.border": "#3B3E43",
+            // Panels (PROBLEMS/TERMINAL/OUTPUT) and panel title
+            "panel.background": "#1E1F22",
+            "panel.border": "#3B3E43",
+            "panelTitle.activeForeground": "#FFFFFF",
+            "panelTitle.inactiveForeground": "#A8ADAF",
+            "panelTitle.activeBorder": "#3D7EFF",
+            // General surfaces and separators
+            "editorGroup.border": "#3B3E43",
+            "editorGroupHeader.tabsBackground": "#1E1F22",
+            "editorGroupHeader.border": "#3B3E43",
+            "breadcrumb.background": "#1E1F22",
+            "menu.background": "#2B2D30",
+            "dropdown.background": "#2B2D30",
+            "dropdown.border": "#3B3E43",
+            // Scrollbar/hover accents (subtle, flatter)
+            "scrollbarSlider.background": "#5C677333",
+            "scrollbarSlider.hoverBackground": "#5C677355",
+            "scrollbarSlider.activeBackground": "#5C677377",
+            "editorHoverWidget.background": "#2B2D30",
+            "editorHoverWidget.border": "#3B3E43",
+            "list.hoverBackground": "#2E3033",
+            "list.inactiveSelectionBackground": "#2E3033",
+            "list.activeSelectionBackground": "#323438"
+        }
+    }
 }
