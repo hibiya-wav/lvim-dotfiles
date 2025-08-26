@@ -495,7 +495,6 @@
     },
     "custom-ui-style.font.monospace": "JetBrains Mono",
     "workbench.iconTheme": "icons",
-    "workbench.colorTheme": "Darcula (IntelliJ)",
     //   "workbench.colorCustomizations": {
     //     "[Darcula (IntelliJ)]": {
     //       "editor.background": "#1A1B1E", // Darker editor background for a modern feel
@@ -526,13 +525,21 @@
             "activityBarBadge.background": "#3D7EFF",
             "activityBarBadge.foreground": "#FFFFFF",
             // Tabs
-            "tab.activeBackground": "#2B2D30",
+            "tab.activeBackground": "#232428",
             "tab.inactiveBackground": "#1E1F22",
-            "tab.activeForeground": "#FFFFFF",
-            "tab.inactiveForeground": "#A8ADAF",
-            "tab.border": "#3B3E43",
-            "tab.activeBorderTop": "#3D7EFF",
-            "tab.hoverBackground": "#323438",
+            "tab.activeForeground": "#E0E2E4",
+            "tab.inactiveForeground": "#777B80",
+            "tab.border": "#252526",
+            "tab.activeBorderTop": "#252526",
+            "tab.hoverBackground": "#2A2B2F",
+            "tab.hoverForeground": "#E0E2E4",
+            "tab.unfocusedActiveForeground": "#C8CDD0",
+            "tab.unfocusedInactiveForeground": "#5C6773",
+            "tab.unfocusedHoverBackground": "#232428",
+            "tab.activeModifiedBorder": "#444648",
+            "tab.inactiveModifiedBorder": "#333436",
+            "tab.lastPinnedBorder": "#232428",
+            "tab.activeBorder": "#676767",
             // Title bar (top)
             "titleBar.activeBackground": "#2B2D30",
             "titleBar.inactiveBackground": "#26272A",
@@ -564,8 +571,10 @@
             "scrollbarSlider.background": "#5C677333",
             "scrollbarSlider.hoverBackground": "#5C677355",
             "scrollbarSlider.activeBackground": "#5C677377",
-            "editorHoverWidget.background": "#2B2D30",
+            "editorHoverWidget.background": "#2b2d30",
             "editorHoverWidget.border": "#3B3E43",
+            "editorSuggestWidget.background": "#2b2d30",
+            "editorSuggestWidget.border": "#3B3E43",
             // "list.hoverBackground": "#2E3033",
             // "list.inactiveSelectionBackground": "#2E3033",
             // "list.activeSelectionBackground": "#323438"
@@ -583,5 +592,6 @@
             "tree.indentGuidesStroke": "#5C6773", // Indent guide lines
             "list.highlightForeground": "#3D7EFF" // Search highlight color in explorer
         }
-    }
+    },
+    "workbench.colorTheme": "Darcula (IntelliJ)"
 }
