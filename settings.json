@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
     "java.maven.downloadSources": true,
     "terminal.integrated.fontSize": 14,
     "editor.bracketPairColorization.enabled": false,
@@ -26,17 +26,17 @@
     },
     "workbench.editor.empty.hint": "hidden",
     "workbench.startupEditor": "none",
-    "editor.fontFamily": "Iosevka Term",
-    "editor.codeLensFontFamily": "Iosevka Term",
-    "editor.inlayHints.fontFamily": "Iosevka Term",
-    "editor.inlineSuggest.fontFamily": "Iosevka Term",
-    "debug.console.fontFamily": "Iosevka Term",
-    "terminal.integrated.fontFamily": "Iosevka Term",
-    "notebook.markup.fontFamily": "Iosevka Term",
-    "notebook.output.fontFamily": "Iosevka Term",
-    "chat.editor.fontFamily": "Iosevka Term",
-    "chat.editor.fontWeight": "Iosevka Term",
-    "custom-ui-style.font.sansSerif": "Iosevka Term",
+    "editor.fontFamily": "Iosevka",
+    "editor.codeLensFontFamily": "Iosevka",
+    "editor.inlayHints.fontFamily": "Iosevka",
+    "editor.inlineSuggest.fontFamily": "Iosevka",
+    "debug.console.fontFamily": "Iosevka",
+    "terminal.integrated.fontFamily": "Iosevka",
+    "notebook.markup.fontFamily": "Iosevka",
+    "notebook.output.fontFamily": "Iosevka",
+    "chat.editor.fontFamily": "Iosevka",
+    "chat.editor.fontWeight": "Iosevka",
+    "custom-ui-style.font.sansSerif": "Iosevka",
     "editor.minimap.enabled": false,
     /***************VIM***************/
     // Editor Settings
@@ -493,111 +493,9 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "custom-ui-style.font.monospace": "Iosevka Term",
-    "workbench.iconTheme": "icons",
-    //   "workbench.colorCustomizations": {
-    //     "[Darcula (IntelliJ)]": {
-    //       "editor.background": "#1A1B1E", // Darker editor background for a modern feel
-    //       "sideBar.background": "#1E1E1E", // Uniform sidebar to reduce clutter
-    //       "activityBar.background": "#1A1B1E", // Matches the cooler, deeper tone
-    //       "statusBar.background": "#1A1B1E", // Bottom bar for consistency
-    //       "titleBar.activeBackground": "#1E1E1E", // Top bar when focused
-    //       "titleBar.inactiveBackground": "#252526", // Slightly lighter when inactive
-    //       "tab.activeBackground": "#1A1B1E", // Active tab blending
-    //       "tab.inactiveBackground": "#252526" // Inactive tabs with subtle contrast
-    //     }
-    //   }
-    "workbench.colorCustomizations": {
-        "[Darcula (IntelliJ)]": {
-            // Editor and gutter
-            "editor.background": "#1E1F22",
-            "editorLineNumber.foreground": "#5C6773",
-            "editorLineNumber.activeForeground": "#A8ADAF",
-            "editorGutter.background": "#1E1F22",
-            // Sidebar and activity bar (left chrome)
-            "sideBar.background": "#2B2D30",
-            "sideBar.foreground": "#C8CDD0",
-            "sideBar.border": "#3B3E43",
-            "activityBar.background": "#2B2D30",
-            "activityBar.foreground": "#C8CDD0",
-            "activityBar.inactiveForeground": "#8D9399",
-            "activityBar.border": "#3B3E43",
-            "activityBarBadge.background": "#3D7EFF",
-            "activityBarBadge.foreground": "#FFFFFF",
-            // Tabs
-            "tab.activeBackground": "#232428",
-            "tab.inactiveBackground": "#1E1F22",
-            "tab.activeForeground": "#E0E2E4",
-            "tab.inactiveForeground": "#777B80",
-            "tab.border": "#252526",
-            "tab.activeBorderTop": "#252526",
-            "tab.hoverBackground": "#2A2B2F",
-            "tab.hoverForeground": "#E0E2E4",
-            "tab.unfocusedActiveForeground": "#C8CDD0",
-            "tab.unfocusedInactiveForeground": "#5C6773",
-            "tab.unfocusedHoverBackground": "#232428",
-            "tab.activeModifiedBorder": "#444648",
-            "tab.inactiveModifiedBorder": "#333436",
-            "tab.lastPinnedBorder": "#232428",
-            "tab.activeBorder": "#676767",
-            // Title bar (top)
-            "titleBar.activeBackground": "#2B2D30",
-            "titleBar.inactiveBackground": "#26272A",
-            "titleBar.activeForeground": "#C8CDD0",
-            "titleBar.inactiveForeground": "#9AA0A6",
-            "titleBar.border": "#3B3E43",
-            // Status bar (bottom)
-            "statusBar.background": "#2B2D30",
-            "statusBar.foreground": "#C8CDD0",
-            "statusBar.noFolderBackground": "#2B2D30",
-            "statusBar.debuggingBackground": "#2B2D30",
-            // "statusBar.debuggingForeground": "#FFFFFF",
-            "statusBar.border": "#3B3E43",
-            // Panels (PROBLEMS/TERMINAL/OUTPUT) and panel title
-            "panel.background": "#1E1F22",
-            "panel.border": "#3B3E43",
-            "panelTitle.activeForeground": "#FFFFFF",
-            "panelTitle.inactiveForeground": "#A8ADAF",
-            "panelTitle.activeBorder": "#3D7EFF",
-            // General surfaces and separators
-            "editorGroup.border": "#3B3E43",
-            "editorGroupHeader.tabsBackground": "#1E1F22",
-            "editorGroupHeader.border": "#3B3E43",
-            "breadcrumb.background": "#1E1F22",
-            "menu.background": "#2B2D30",
-            "dropdown.background": "#2B2D30",
-            "dropdown.border": "#3B3E43",
-            // Scrollbar/hover accents (subtle, flatter)
-            "scrollbarSlider.background": "#5C677333",
-            "scrollbarSlider.hoverBackground": "#5C677355",
-            "scrollbarSlider.activeBackground": "#5C677377",
-            "editorHoverWidget.background": "#2b2d30",
-            "editorHoverWidget.border": "#3B3E43",
-            "editorSuggestWidget.background": "#2b2d30",
-            "editorSuggestWidget.border": "#3B3E43",
-            // "list.hoverBackground": "#2E3033",
-            // "list.inactiveSelectionBackground": "#2E3033",
-            // "list.activeSelectionBackground": "#323438"
-            // File Explorer focus and selection colors
-            "list.focusBackground": "#323438", // Background when navigating with hjkl/arrows
-            "list.focusForeground": "#FFFFFF", // Text color for focused item
-            "list.focusOutline": "#3D7EFF", // Subtle outline around focused item
-            "list.activeSelectionBackground": "#3D7EFF22", // Background when item is selected (clicked)
-            "list.activeSelectionForeground": "#FFFFFF", // Text color for selected item
-            "list.inactiveSelectionBackground": "#323438", // Background when explorer loses focus
-            "list.inactiveSelectionForeground": "#C8CDD0", // Text color when explorer inactive
-            "list.hoverBackground": "#2E3033", // Background when hovering with mouse
-            "list.hoverForeground": "#FFFFFF", // Text color on hover
-            // Additional tree-specific colors for better visibility
-            "tree.indentGuidesStroke": "#5C6773", // Indent guide lines
-            "list.highlightForeground": "#3D7EFF" // Search highlight color in explorer
-        }
-    },
-    "workbench.colorTheme": "Hell Pine",
+    "custom-ui-style.font.monospace": "Iosevka",
     "java.debug.settings.showStaticVariables": true,
     "custom-ui-style.background.opacity": 1,
-    "editor.allowVariableFonts": false,
-    "editor.fontVariations": "Regular",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -606,6 +504,7 @@
                     "comment.block",
                     "comment.block.documentation",
                     "comment.line",
+                    "comment.block.javadoc.java",
                     "constant",
                     "constant.character",
                     "constant.character.escape",
@@ -708,5 +607,28 @@
                 }
             }
         ]
-    }
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "*": {
+                "fontStyle": ""
+            },
+            "method:java": {
+                "fontStyle": ""
+            },
+            "method.static:java": {
+                "fontStyle": ""
+            },
+            "method.public:java": {
+                "fontStyle": ""
+            }
+        }
+    },
+    "editor.allowVariableFonts": false,
+    "editor.fontVariations": "Regular",
+    "workbench.colorTheme": "JetBrains Faithful",
+    "editor.stickyScroll.enabled": false,
+    "editor.lineHeight": 1.3,
+    "workbench.iconTheme": "icons",
 }
