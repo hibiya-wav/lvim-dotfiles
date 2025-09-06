@@ -4,7 +4,6 @@
     "terminal.integrated.fontSize": 14,
     "editor.bracketPairColorization.enabled": false,
     "chat.commandCenter.enabled": false,
-    // "terminal.integrated.defaultProfile.linux": "tmux",
     "terminal.integrated.profiles.osx": {
         "bash": null,
         "tmux": {
@@ -457,22 +456,6 @@
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-containers"
     },
-    "dbcode.connections": [
-        {
-            "connectionId": "KptfPFz1BmnQj3S8KL3WW",
-            "name": "pgsqlDBMicroservice",
-            "driver": "postgres",
-            "connectionType": "host",
-            "host": "localhost",
-            "port": 5432,
-            "ssl": false,
-            "username": "hibiya",
-            "password": "",
-            "savePassword": "secretStorage",
-            "readOnly": false,
-            "connectionTimeout": 30
-        }
-    ],
     "dbcode.resultLocation": "below",
     "dbcode.ai.inlineCompletion": false,
     "[html]": {
@@ -494,8 +477,12 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "custom-ui-style.font.monospace": "Iosevka",
+    "workbench.iconTheme": "icons",
+    "workbench.colorTheme": "JetBrains Faithful",
     "java.debug.settings.showStaticVariables": true,
     "custom-ui-style.background.opacity": 1,
+    "editor.allowVariableFonts": false,
+    "editor.fontVariations": "Regular",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -625,10 +612,6 @@
             }
         }
     },
-    "editor.allowVariableFonts": false,
-    "editor.fontVariations": "Regular",
-    "workbench.colorTheme": "JetBrains Faithful",
     "editor.stickyScroll.enabled": false,
-    "editor.lineHeight": 1.3,
-    "workbench.iconTheme": "icons",
+    "editor.lineHeight": 1.3
 }
