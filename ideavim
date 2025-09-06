@@ -6,39 +6,47 @@
 let mapleader = " "
 
 "" -- Suggested options --
-
 " Show a few lines of context around the cursor. Note that this makes the text scroll if you mouse-click near the start or end of the window.
 set scrolloff=8
+
 " Do incremental searching.
 set incsearch
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
+
 " set clipboard to unnamed
 set clipboard+=unnamedplus
 set clipboard+=ideaput
+
 " set relative line numbers
 set relativenumber number
-
+set ignorecase
+set smartcase
 
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 " Highlight copied text
 Plug 'machakann/vim-highlightedyank'
+
 " Commentary plugin
 Plug 'tpope/vim-commentary'
+
 " NERDTree plugin
 Plug 'preservim/nerdtree'
 map <leader>e :NERDTreeToggle<CR>
 map <leader>nt :NERDTree<CR>
+
 " surround plugin
 Plug 'tpope/vim-surround'
+
 " multiple-cursors plugin
 Plug 'mg979/vim-visual-multi'
-" easymotion plugin
-Plug 'easymotion/vim-easymotion'
-map <C-f> <Plug>(easymotion-s)
-map <leader>f <Plug>(easymotion-f)
 
+" easymotion plugin
+" Plug 'easymotion/vim-easymotion'
+" map <C-f> <Plug>(easymotion-s)
+" map <leader>f <Plug>(easymotion-f)
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 
@@ -91,8 +99,8 @@ nmap <leader>bn <action>(NextTab)
 nmap <leader>i <action>(Generate)
 
 " Error
-nmap K <action>(ShowErrorDescription)
-map K  <Action>(QuickJavaDoc)
+map <D-k> <Action>(ShowErrorDescription)
+map K <Action>(QuickJavaDoc)
 nmap <leader>ke <action>(GotoNextError)
 
 " Breakpoint
@@ -102,16 +110,38 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
 " Terminal
-map <leader>t <Action>(ActivateTerminalToolWindow)
+map <D-;> <Action>(ActivateTerminalToolWindow)
 
 " Navigation
 nnoremap <leader>\ :action MoveTabRight<CR>
 nnoremap <leader>- :action MoveTabDown<CR>
 nnoremap <leader>m :action MoveEditorToOppositeTabGroup<CR>
+
 " Hide Run window
 map <leader>h <Action>(HideActiveWindow)
+
 " Close Non-Active Windows
-map <leader>w <Action>(CloseAllEditorsButActive)
+" map <leader>w <Action>(CloseAllEditorsButActive)
 " multiple carets
 map <A-S-J> :action EditorCloneCaretBelow<CR>
 map <A-S-K> :action EditorCloneCaretAbove<CR>
+
+" indentation in vim
+vnoremap < <gv
+vnoremap > >gv
+
+" split window instructions
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" close file
+map <leader>q <action>(CloseContent)
+
+" text search
+map <leader>st <Action>(FindInPath)
+
+" file search
+map <leader>sf <Action>(SearchEverywhere)
+map <leader>rsf <Action>(RecentFiles)
