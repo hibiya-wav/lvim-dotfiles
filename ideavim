@@ -70,9 +70,6 @@ nmap <C-k> <C-u>zz
 nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
 
-" save file
-nnoremap <leader>s :w<CR>
-
 " select all
 nnoremap <leader>a ggVG
 
@@ -99,18 +96,21 @@ nmap <leader>bn <action>(NextTab)
 nmap <leader>i <action>(Generate)
 
 " Error
-map <D-k> <Action>(ShowErrorDescription)
+map <A-k> <Action>(ShowErrorDescription)
 map K <Action>(QuickJavaDoc)
 nmap <leader>ke <action>(GotoNextError)
 
 " Breakpoint
 map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>d <Action>(Debug)
+map <leader>s <Action>(Stop)
 
 " Distraction Free Mode
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
 " Terminal
-map <D-;> <Action>(ActivateTerminalToolWindow)
+" D = CMD (macos) | A = alt (linux)
+map <A-;> <Action>(ActivateTerminalToolWindow)
 
 " Navigation
 nnoremap <leader>\ :action MoveTabRight<CR>
@@ -138,6 +138,7 @@ map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 
 " close file
 map <leader>q <action>(CloseContent)
+map <C-w> <action>(CloseContent)
 
 " text search
 map <leader>st <Action>(FindInPath)
