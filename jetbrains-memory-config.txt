@@ -14,5 +14,5 @@
 -Dide.no.platform.update=true
 -Dide.managed.by.toolbox=/Applications/JetBrains Toolbox.app/Contents/MacOS/jetbrains-toolbox
 -Dtoolbox.notification.token=146fffe3-16a3-4493-98ba-560e294f326d
--Dtoolbox.notification.portFile=/Users/danny/Library/Caches/JetBrains/Toolbox/ports/f3f303c7-5f69-4fdf-80e4-632746b3bda5.port
+-Dtoolbox.notification.portFile=/home/hibiya/Library/Caches/JetBrains/Toolbox/ports/f3f303c7-5f69-4fdf-80e4-632746b3bda5.port
 -Didea.suppressed.plugins.set.selector=radler
