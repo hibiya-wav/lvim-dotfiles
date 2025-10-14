@@ -201,14 +201,6 @@
         "command": "workbench.action.increaseViewWidth"
     },
     {
-        // "ctrl+w m": Toggles maximizing the current editor group
-        "key": "ctrl+w m",
-        "command": "workbench.action.toggleMaximizeEditorGroup"
-    },
-    //
-    // TAB MANAGEMENT
-    //
-    {
         // "alt+[": Goes to previous editor in group
         "key": "alt+[",
         "command": "workbench.action.previousEditor"
@@ -314,5 +306,20 @@
         "key": "shift+f11",
         "command": "-workbench.action.debug.stepOut",
         "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-extension.vim_ctrl+w",
+        "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
     }
 ]
