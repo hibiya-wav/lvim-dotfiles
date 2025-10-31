@@ -13,4 +13,3 @@
 -XX:+UseLargePages
 -Dide.no.platform.update=true
 -Didea.suppressed.plugins.set.selector=radler
-
