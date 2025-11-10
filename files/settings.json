@@ -1,24 +1,25 @@
 {
-    "editor.fontSize": 18,
+    "editor.fontSize": 17,
+    "editor.lineHeight": 1.3,
     "java.maven.downloadSources": true,
-    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontSize": 17,
     "editor.bracketPairColorization.enabled": false,
     "chat.commandCenter.enabled": false,
-    "terminal.integrated.profiles.osx": {
-        "bash": null,
-        "tmux": {
-            "path": "bash",
-            "args": [
-                "-c",
-                "tmux new -ADs ${PWD##*/}"
-            ],
-            "icon": "terminal-tmux"
-        }
-    },
-    "terminal.integrated.defaultProfile.osx": "bash (2)",
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
+    // "terminal.integrated.profiles.osx": {
+    //     "bash": null,
+    //     "tmux": {
+    //         "path": "bash",
+    //         "args": [
+    //             "-c",
+    //             "tmux new -ADs ${PWD##*/}"
+    //         ],
+    //         "icon": "terminal-tmux"
+    //     }
+    // },
+    "terminal.integrated.defaultProfile.osx": "bash",
+    // "[jsonc]": {
+    //     "editor.defaultFormatter": "vscode.json-language-features"
+    // },
     "workbench.editor.enablePreview": false,
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -41,8 +42,6 @@
     // Editor Settings
     // Display line numbers relative to the current cursor position
     "editor.lineNumbers": "relative",
-    // Prevent scrolling beyond the last line of the file
-    "editor.scrollBeyondLastLine": false,
     // Keep 8 lines visible above and below the cursor when scrolling
     "editor.cursorSurroundingLines": 8,
     // Enable smooth scrolling animation
@@ -100,13 +99,8 @@
     "vim.insertModeKeyBindings": [
         {
             // Exit insert mode by pressing 'j' twice quickly
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
         }
     ],
     // Normal Mode Keybindings
@@ -114,74 +108,40 @@
         // Basic Operations
         {
             // Delete current line with leader+d
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "after": [
-                "d",
-                "d"
-            ]
+            "before": ["<leader>", "d"],
+            "after": ["d", "d"]
         },
         {
             // Clear search highlighting with Ctrl+n
-            "before": [
-                "<C-n>"
-            ],
-            "commands": [
-                ":nohl"
-            ]
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
         },
         {
             // Insert line break above cursor with K
-            "before": [
-                "K"
-            ],
-            "commands": [
-                "lineBreakInsert"
-            ],
+            "before": ["K"],
+            "commands": ["lineBreakInsert"],
             "silent": true
         },
         // Window Management
         {
             // Split editor with leader+w
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.splitEditor"
-            ]
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.splitEditor"]
         },
         {
             // Save current file with leader+w+w
-            "before": [
-                "<leader>",
-                "w",
-                "w"
-            ],
-            "commands": [
-                ":w"
-            ]
+            "before": ["<leader>", "w", "w"],
+            "commands": [":w"]
         },
         {
             // Close current file with leader+w+c
-            "before": [
-                "<leader>",
-                "w",
-                "c"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
+            "before": ["<leader>", "w", "c"],
+            "commands": ["workbench.action.closeActiveEditor"]
         },
         // Sidebar and Explorer
         {
             // Toggle sidebar and focus explorer with leader+e
-            "before": [
-                "<leader>",
-                "e"
-            ],
+            "before": ["<leader>", "e"],
             "commands": [
                 "workbench.action.toggleSidebarVisibility"
                 // "workbench.files.action.focusFilesExplorer" // #TODO: dosent work as expected
@@ -189,47 +149,29 @@
         },
         {
             // Reveal current file in explorer with leader+f
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "commands": [
-                "revealInExplorer"
-            ]
+            "before": ["<leader>", "f"],
+            "commands": ["revealInExplorer"]
         },
         // File Operations
         {
             // Copy current file path with leader+f+y
-            "before": [
-                "<leader>",
-                "f",
-                "y"
-            ],
-            "commands": [
-                "copyFilePath"
-            ]
+            "before": ["<leader>", "f", "y"],
+            "commands": ["copyFilePath"]
         },
         {
             // Create new file in current directory with leader+f+n
-            "before": [
-                "<leader>",
-                "f",
-                "n"
-            ],
-            "commands": [
-                "explorer.newFile"
-            ]
+            "before": ["<leader>", "f", "n"],
+            "commands": ["explorer.newFile"]
         },
         // Code Actions
         {
             // Toggle line comment with leader+c
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
+            "before": ["<leader>", "c"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["search.action.openNewEditor"]
         },
         // #TODO: confirm the following
         // {
@@ -255,198 +197,95 @@
         //   ]
         // }
         {
-            "before": [
-                "<leader>",
-                "b",
-                "n"
-            ],
-            "commands": [
-                "workbench.action.nextEditor"
-            ]
+            "before": ["<leader>", "b", "n"],
+            "commands": ["workbench.action.nextEditor"]
         },
         {
-            "before": [
-                "<leader>",
-                "b",
-                "b"
-            ],
-            "commands": [
-                "workbench.action.previousEditor"
-            ]
+            "before": ["<leader>", "b", "b"],
+            "commands": ["workbench.action.previousEditor"]
         },
         {
-            "before": [
-                "<leader>",
-                "l",
-                "f"
-            ],
-            "commands": [
-                "editor.action.formatDocument"
-            ]
+            "before": ["<leader>", "l", "f"],
+            "commands": ["editor.action.formatDocument"]
         },
         {
-            "before": [
-                "<leader>",
-                "s",
-                "t"
-            ],
-            "commands": [
-                "workbench.action.findInFiles"
-            ]
+            "before": ["<leader>", "s", "t"],
+            "commands": ["workbench.action.findInFiles"]
         },
         // Search for a file
         {
-            "before": [
-                "<leader>",
-                "s",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.quickOpen"
-            ]
+            "before": ["<leader>", "s", "f"],
+            "commands": ["workbench.action.quickOpen"]
         },
         {
-            "before": [
-                "<leader>",
-                "r"
-            ],
-            "commands": [
-                "workbench.action.debug.run"
-            ]
+            "before": ["<leader>", "r"],
+            "commands": ["workbench.action.debug.run"]
         },
         // Stop running code
         {
-            "before": [
-                "<leader>",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.debug.stop"
-            ]
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.debug.stop"]
         },
         // Place breakpoint
         {
-            "before": [
-                "<leader>",
-                "b"
-            ],
-            "commands": [
-                "editor.debug.action.toggleBreakpoint"
-            ]
+            "before": ["<leader>", "b"],
+            "commands": ["editor.debug.action.toggleBreakpoint"]
         },
         // Activate debug procedure
         {
-            "before": [
-                "<leader>",
-                "d"
-            ],
-            "commands": [
-                "workbench.action.debug.start"
-            ]
+            "before": ["<leader>", "d"],
+            "commands": ["workbench.action.debug.start"]
         },
         // Show quick documentation (hover) | show error descriptions
         {
-            "before": [
-                "K"
-            ],
-            "commands": [
-                "editor.action.showHover"
-            ]
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
         },
         {
-            "before": [
-                "g",
-                "d"
-            ],
-            "commands": [
-                "editor.action.revealDefinition"
-            ]
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"]
         },
         // Find all references/usages
         {
-            "before": [
-                "g",
-                "r"
-            ],
-            "commands": [
-                "editor.action.referenceSearch.trigger"
-            ]
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"]
         },
         {
-            "before": [
-                "<leader>",
-                "t",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.terminal.new"
-            ]
+            "before": ["<leader>", "t", "h"],
+            "commands": ["workbench.action.terminal.new"]
         },
         // New terminal tab (with other coding tabs)
         {
-            "before": [
-                "<leader>",
-                "t",
-                "t"
-            ],
-            "commands": [
-                "workbench.action.createTerminalEditor"
-            ]
+            "before": ["<leader>", "t", "t"],
+            "commands": ["workbench.action.createTerminalEditor"]
         }
     ],
     // Visual Mode Keybindings
     "vim.visualModeKeyBindings": [
         {
             // Comment selected lines and exit visual mode with leader+c
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine",
-                "extension.vim_escape"
-            ]
+            "before": ["<leader>", "c"],
+            "commands": ["editor.action.commentLine", "extension.vim_escape"]
         },
         {
             // Select all occurrences of current selection with leader+a
-            "before": [
-                "<leader>",
-                "a"
-            ],
-            "commands": [
-                "editor.action.selectHighlights"
-            ]
+            "before": ["<leader>", "a"],
+            "commands": ["editor.action.selectHighlights"]
         },
         {
             // Sort selected lines
-            "before": [
-                "<leader>",
-                "s",
-                "s"
-            ],
-            "commands": [
-                "editor.action.sortLinesAscending"
-            ]
+            "before": ["<leader>", "s", "s"],
+            "commands": ["editor.action.sortLinesAscending"]
         },
         {
             // Transform to uppercase
-            "before": [
-                "<leader>",
-                "u"
-            ],
-            "commands": [
-                "editor.action.transformToUppercase"
-            ]
+            "before": ["<leader>", "u"],
+            "commands": ["editor.action.transformToUppercase"]
         },
         {
             // Transform to lowercase
-            "before": [
-                "<leader>",
-                "l"
-            ],
-            "commands": [
-                "editor.action.transformToLowercase"
-            ]
+            "before": ["<leader>", "l"],
+            "commands": ["editor.action.transformToLowercase"]
         }
     ],
     "extensions.ignoreRecommendations": true,
@@ -477,8 +316,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "custom-ui-style.font.monospace": "Iosevka",
-    "workbench.iconTheme": "icons",
-    "workbench.colorTheme": "JetBrains Faithful",
+    "workbench.iconTheme": "jetbrains-file-icon-theme-dark",
+    "workbench.colorTheme": "Solarized Osaka",
     "java.debug.settings.showStaticVariables": true,
     "custom-ui-style.background.opacity": 1,
     "editor.allowVariableFonts": false,
@@ -613,6 +452,40 @@
         }
     },
     "editor.stickyScroll.enabled": false,
-    "editor.lineHeight": 1.3,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "terminal.integrated.initialHint": false,
+    "chat.agent.enabled": false,
+    "editor.allowVariableLineHeights": false,
+    "editor.detectIndentation": false,
+    "editor.experimentalGpuAcceleration": "on",
+    "editor.hover.delay": 250,
+    "editor.hover.hidingDelay": 250,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollBeyondLastLine": false,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "workbench.hover.delay": 250,
+    "workbench.localHistory.maxFileEntries": 150,
+    "workbench.reduceMotion": "on",
+    "workbench.sash.hoverDelay": 250,
+    "workbench.tips.enabled": false,
+    "workbench.settings.showAISearchToggle": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.fullScreen": false,
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "debug.console.closeOnEnd": true,
+    "scm.alwaysShowRepositories": true,
+    "scm.inputFontFamily": "Iosevka",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.hideOnStartup": "always",
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
