@@ -1,8 +1,7 @@
 {
-    "editor.fontSize": 17,
     "editor.lineHeight": 1.3,
     "java.maven.downloadSources": true,
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": 16,
     "editor.bracketPairColorization.enabled": false,
     "chat.commandCenter.enabled": false,
     // "terminal.integrated.profiles.osx": {
@@ -316,8 +315,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "custom-ui-style.font.monospace": "Iosevka",
-    "workbench.iconTheme": "jetbrains-file-icon-theme-dark",
-    "workbench.colorTheme": "Solarized Osaka",
+    "workbench.iconTheme": "icons",
     "java.debug.settings.showStaticVariables": true,
     "custom-ui-style.background.opacity": 1,
     "editor.allowVariableFonts": false,
@@ -487,5 +485,14 @@
     "telemetry.telemetryLevel": "off",
     "[jsonc]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontSize": 16,
+    "window.zoomLevel": -0.5,
+    "workbench.colorTheme": "Kanagawa Dragon",
+    "workbench.colorCustomizations": {
+        "[Kanagawa Dragon]": {
+            "editorSuggestWidget.background": "#181616",
+            "editorSuggestWidget.selectedBackground": "#282727"
+        }
     }
 }
