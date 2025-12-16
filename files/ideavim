@@ -96,7 +96,9 @@ nmap <leader>bn <action>(NextTab)
 nmap <leader>i <action>(Generate)
 
 " Error
-map <A-k> <Action>(ShowErrorDescription)
+" D = CMD (macos) | A = alt (linux)
+" map <A-k> <Action>(ShowErrorDescription)
+map <D-k> <Action>(ShowErrorDescription)
 map K <Action>(QuickJavaDoc)
 nmap <leader>ke <action>(GotoNextError)
 
@@ -110,7 +112,8 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 
 " Terminal
 " D = CMD (macos) | A = alt (linux)
-map <A-;> <Action>(ActivateTerminalToolWindow)
+map <D-;> <Action>(ActivateTerminalToolWindow)
+" map <A-;> <Action>(ActivateTerminalToolWindow)
 
 " Navigation
 nnoremap <leader>\ :action MoveTabRight<CR>
@@ -146,3 +149,4 @@ map <leader>st <Action>(FindInPath)
 " file search
 map <leader>sf <Action>(SearchEverywhere)
 map <leader>rsf <Action>(RecentFiles)
+
