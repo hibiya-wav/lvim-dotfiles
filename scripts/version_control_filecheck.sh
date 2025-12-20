@@ -13,8 +13,7 @@ version_control_status_check() {
     fi
 }
 
-# version_control_status_check $HOME/Documents/Programming/swe
 version_control_status_check $HOME/Documents/Resume
-version_control_status_check $HOME/Documents/Programming/Data_Programming
+version_control_status_check $HOME/Documents/Programming/swe
 version_control_status_check $HOME/Documents/Programming/Interviews
 version_control_status_check $HOME/Documents/Programming/lvim-dotfiles
