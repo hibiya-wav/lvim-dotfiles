@@ -15,5 +15,6 @@ version_control_status_check() {
 
 version_control_status_check $HOME/Documents/Resume
 version_control_status_check $HOME/Documents/Programming/swe
+version_control_status_check $HOME/Documents/Programming/Books
 version_control_status_check $HOME/Documents/Programming/Interviews
 version_control_status_check $HOME/Documents/Programming/lvim-dotfiles
