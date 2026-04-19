@@ -46,6 +46,67 @@
         "key": "ctrl+t",
         "command": "workbench.action.navigateBack"
     },
+
+    /// NERDtree Bindings
+    // 1. Use 'ctrl+n' to toggle the NERDTree sidebar
+    // {
+    //     "key": "ctrl+n",
+    //     "command": "workbench.action.toggleSidebarVisibility",
+    //     "when": "vim.mode == 'Normal'"
+    // },
+    // 2. Focus the explorer with <leader>e (matches your existing Vim config)
+    // {
+    //     "key": "space e",
+    //     "command": "workbench.files.action.focusFilesExplorer",
+    //     "when": "vim.mode == 'Normal' && !sideBarFocus"
+    // },
+    // // 3. NERDTree Navigation (when the sidebar is focused)
+    // {
+    //     "key": "j",
+    //     "command": "list.focusDown",
+    //     "when": "filesExplorerFocus && !inputFocus"
+    // },
+    // {
+    //     "key": "k",
+    //     "command": "list.focusUp",
+    //     "when": "filesExplorerFocus && !inputFocus"
+    // },
+    // {
+    //     "key": "h",
+    //     "command": "list.collapse",
+    //     "when": "filesExplorerFocus && !inputFocus"
+    // },
+    // {
+    //     "key": "l",
+    //     "command": "list.select",
+    //     "when": "filesExplorerFocus && !inputFocus"
+    // },
+    // 4. File Operations (The NERDTree 'm' menu)
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
     //
     // SUGGESTIONS AND AUTOCOMPLETION SHORTCUTS
     //

@@ -1,30 +1,34 @@
 {
+    // --- VSC GENERAL SETTINGS ---
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "chat.disableAIFeatures": false,
     "editor.lineHeight": 1.3,
+    "window.zoomLevel": -0.5,
+    "editor.fontSize": 16,
+    "editor.allowVariableLineHeights": false,
+    "editor.stickyScroll.enabled": false,
+    
     "java.maven.downloadSources": true,
     "terminal.integrated.fontSize": 16,
     "editor.bracketPairColorization.enabled": false,
     "chat.commandCenter.enabled": false,
-    // "terminal.integrated.profiles.osx": {
-    //     "bash": null,
-    //     "tmux": {
-    //         "path": "bash",
-    //         "args": [
-    //             "-c",
-    //             "tmux new -ADs ${PWD##*/}"
-    //         ],
-    //         "icon": "terminal-tmux"
-    //     }
-    // },
+    "workbench.settings.showAISearchToggle": false,
     "terminal.integrated.defaultProfile.osx": "bash",
-    // "[jsonc]": {
-    //     "editor.defaultFormatter": "vscode.json-language-features"
-    // },
     "workbench.editor.enablePreview": false,
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "workbench.editor.empty.hint": "hidden",
     "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.initialHint": false,
+    "terminal.integrated.cursorBlinking": true,
+    "chat.agent.enabled": false,
+    "editor.experimentalGpuAcceleration": "on",
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+
+    // --- FONT STYLING (KEEPING YOUR IOSEVKA EVERYWHERE) ---
     "editor.fontFamily": "Iosevka",
     "editor.codeLensFontFamily": "Iosevka",
     "editor.inlayHints.fontFamily": "Iosevka",
@@ -34,233 +38,49 @@
     "notebook.markup.fontFamily": "Iosevka",
     "notebook.output.fontFamily": "Iosevka",
     "chat.editor.fontFamily": "Iosevka",
-    "chat.editor.fontWeight": "Iosevka",
+    "scm.inputFontFamily": "Iosevka",
     "custom-ui-style.font.sansSerif": "Iosevka",
-    "editor.minimap.enabled": false,
-    /***************VIM***************/
-    // Editor Settings
-    // Display line numbers relative to the current cursor position
+    "custom-ui-style.font.monospace": "Iosevka",
+
+    // --- NEOVIM STYLE UI & PERFORMANCE ---
     "editor.lineNumbers": "relative",
-    // Keep 8 lines visible above and below the cursor when scrolling
     "editor.cursorSurroundingLines": 8,
-    // Enable smooth scrolling animation
-    // "editor.smoothScrolling": false,
-    // Configure minimap for better performance and visibility
-    // "editor.minimap.renderCharacters": false,
-    // "editor.minimap.scale": 2,
-    // Vim Configuration
-    // Enable easymotion plugin for quick navigation
-    // "vim.easymotion": true,
-    // Enable incremental search highlighting
-    "vim.incsearch": true,
-    // Use system clipboard for vim operations
-    "vim.useSystemClipboard": true,
-    // Enable Ctrl key combinations
-    "vim.useCtrlKeys": true,
-    // Enable search highlight
-    "vim.hlsearch": true,
-    // Set space as the leader key
+    "editor.scrollBeyondLastLine": false,
+    // "editor.scrollbar.horizontal": "hidden",
+    // "editor.scrollbar.vertical": "hidden",
+    "workbench.reduceMotion": "on",
+    "workbench.tree.indent": 25,
+    "workbench.tree.renderIndentGuides": "always",
+    "editor.detectIndentation": false,
+    "search.smartCase": true,
+
+    // --- VIM CONFIGURATION ---
     "vim.leader": " ",
-    // Enable vim-sneak plugin for improved motion
-    // "vim.sneak": true,
-    // Use relative line numbers in normal mode
-    // "vim.smartRelativeLine": true,
-    // Fix common fold-related issues
-    // "vim.foldfix": true,
-    // Enable and configure yank highlighting
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.sneak": true,
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.duration": 200,
-    // Customize search highlight color
     "vim.searchHighlightColor": "rgba(180, 142, 173, 0.5)",
-    // Don't start on the first line of a file
-    // "vim.startup.firstline": false,
-    // #TODO: experimenting with those
-    // Status Line Integration
-    // Enable status bar color control based on Vim mode
-    // "vim.statusBarColorControl": true,
-    // Define colors for different Vim modes
-    // "vim.statusBarColors.normal": "#519aba",
-    // "vim.statusBarColors.insert": "#98c379",
-    // "vim.statusBarColors.visual": "#c678dd",
-    // "vim.statusBarColors.visualline": "#c678dd",
-    // "vim.statusBarColors.visualblock": "#c678dd",
-    // "vim.statusBarColors.replace": "#e06c75",
-    // Handle specific keys
+
     "vim.handleKeys": {
-        // Keep Ctrl+d for scrolling down
         "<C-d>": true,
-        // Keep Ctrl+u for scrolling up
         "<C-u>": true,
-        // Disable Ctrl+f to use VS Code's find instead
-        "<C-f>": false
+        "<C-f>": false,
+        "<C-n>": false,
     },
-    // Insert Mode Keybindings
-    "vim.insertModeKeyBindings": [
-        {
-            // Exit insert mode by pressing 'j' twice quickly
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    // Normal Mode Keybindings
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // Basic Operations
-        {
-            // Delete current line with leader+d
-            "before": ["<leader>", "d"],
-            "after": ["d", "d"]
-        },
-        {
-            // Clear search highlighting with Ctrl+n
-            "before": ["<C-n>"],
-            "commands": [":nohl"]
-        },
-        {
-            // Insert line break above cursor with K
-            "before": ["K"],
-            "commands": ["lineBreakInsert"],
-            "silent": true
-        },
-        // Window Management
-        {
-            // Split editor with leader+w
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.splitEditor"]
-        },
-        {
-            // Save current file with leader+w+w
-            "before": ["<leader>", "w", "w"],
-            "commands": [":w"]
-        },
-        {
-            // Close current file with leader+w+c
-            "before": ["<leader>", "w", "c"],
-            "commands": ["workbench.action.closeActiveEditor"]
-        },
-        // Sidebar and Explorer
-        {
-            // Toggle sidebar and focus explorer with leader+e
-            "before": ["<leader>", "e"],
-            "commands": [
-                "workbench.action.toggleSidebarVisibility"
-                // "workbench.files.action.focusFilesExplorer" // #TODO: dosent work as expected
-            ]
-        },
-        {
-            // Reveal current file in explorer with leader+f
-            "before": ["<leader>", "f"],
-            "commands": ["revealInExplorer"]
-        },
-        // File Operations
-        {
-            // Copy current file path with leader+f+y
-            "before": ["<leader>", "f", "y"],
-            "commands": ["copyFilePath"]
-        },
-        {
-            // Create new file in current directory with leader+f+n
-            "before": ["<leader>", "f", "n"],
-            "commands": ["explorer.newFile"]
-        },
-        // Code Actions
-        {
-            // Toggle line comment with leader+c
-            "before": ["<leader>", "c"],
-            "commands": ["editor.action.commentLine"]
-        },
-        {
-            "before": ["<leader>", "f", "f"],
-            "commands": ["search.action.openNewEditor"]
-        },
-        // #TODO: confirm the following
-        // {
-        //   // Rename symbol with leader+r+e
-        //   "before": [
-        //     "<leader>",
-        //     "r",
-        //     "e"
-        //   ],
-        //   "commands": [
-        //     "editor.action.rename"
-        //   ]
-        // },
-        // {
-        //   // Rename file with leader+r+f
-        //   "before": [
-        //     "<leader>",
-        //     "r",
-        //     "f"
-        //   ],
-        //   "commands": [
-        //     "fileutils.renameFile"
-        //   ]
-        // }
-        {
-            "before": ["<leader>", "b", "n"],
-            "commands": ["workbench.action.nextEditor"]
-        },
-        {
-            "before": ["<leader>", "b", "b"],
-            "commands": ["workbench.action.previousEditor"]
-        },
-        {
-            "before": ["<leader>", "l", "f"],
-            "commands": ["editor.action.formatDocument"]
-        },
-        {
-            "before": ["<leader>", "s", "t"],
-            "commands": ["workbench.action.findInFiles"]
-        },
-        // Search for a file
-        {
-            "before": ["<leader>", "s", "f"],
-            "commands": ["workbench.action.quickOpen"]
-        },
-        {
-            "before": ["<leader>", "r"],
-            "commands": ["workbench.action.debug.run"]
-        },
-        // Stop running code
-        {
-            "before": ["<leader>", "s"],
-            "commands": ["workbench.action.debug.stop"]
-        },
-        // Place breakpoint
-        {
-            "before": ["<leader>", "b"],
-            "commands": ["editor.debug.action.toggleBreakpoint"]
-        },
-        // Activate debug procedure
-        {
-            "before": ["<leader>", "d"],
-            "commands": ["workbench.action.debug.start"]
-        },
-        // Show quick documentation (hover) | show error descriptions
-        {
-            "before": ["K"],
-            "commands": ["editor.action.showHover"]
-        },
-        {
-            "before": ["g", "d"],
-            "commands": ["editor.action.revealDefinition"]
-        },
-        // Find all references/usages
-        {
-            "before": ["g", "r"],
-            "commands": ["editor.action.referenceSearch.trigger"]
-        },
-        {
-            "before": ["<leader>", "t", "h"],
-            "commands": ["workbench.action.terminal.new"]
-        },
-        // New terminal tab (with other coding tabs)
-        {
-            "before": ["<leader>", "t", "t"],
-            "commands": ["workbench.action.createTerminalEditor"]
-        }
-    ],
-    // Visual Mode Keybindings
+
     "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "after": [">", "g", "v"]
+        },
+        {
+            "before": ["<"],
+            "after": ["<", "g", "v"]
+        },
         {
             // Comment selected lines and exit visual mode with leader+c
             "before": ["<leader>", "c"],
@@ -287,212 +107,155 @@
             "commands": ["editor.action.transformToLowercase"]
         }
     ],
-    "extensions.ignoreRecommendations": true,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[dockercompose]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
-    },
-    "dbcode.resultLocation": "below",
-    "dbcode.ai.inlineCompletion": false,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.tree.indent": 25,
-    "workbench.tree.renderIndentGuides": "always",
+
+    "vim.insertModeKeyBindings": [
+        { "before": ["j", "j"], "after": ["<Esc>"] },
+        {
+            "before": ["<C-t>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<C-d>"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Buffers & Windows (L/H for quick switching)
+        { "before": ["L"], "commands": ["workbench.action.nextEditor"] },
+        { "before": ["H"], "commands": ["workbench.action.previousEditor"] },
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.splitEditor"],
+        },
+        {
+            "before": ["<leader>", "z"],
+            "commands": ["workbench.action.toggleZenMode"]
+        }
+        { "before": ["<leader>", "w", "w"], "commands": [":w"] },
+        {
+            "before": ["<leader>", "w", "c"],
+            "commands": ["workbench.action.closeActiveEditor"],
+        },
+
+        // Navigation & Explorer
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"],
+        },
+        { "before": ["<leader>", "f"], "commands": ["revealInExplorer"] },
+        { "before": ["<C-n>"], "commands": [":nohl"] },
+
+        // LSP & Search
+        { "before": ["K"], "commands": ["editor.action.showHover"] },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"],
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.referenceSearch.trigger"],
+        },
+        {
+            "before": ["<leader>", "s", "f"],
+            "commands": ["workbench.action.quickOpen"],
+        },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["search.action.openNewEditor"]
+        },
+        {
+            "before": ["<leader>", "f", "s"],
+            "commands": ["workbench.action.findInFiles"],
+        },
+
+        // Debugging (Your original mappings)
+        {
+            "before": ["<leader>", "b"],
+            "commands": ["editor.debug.action.toggleBreakpoint"],
+        },
+        {
+            "before": ["<leader>", "d"],
+            "commands": ["workbench.action.debug.start"],
+        },
+        {
+            "before": ["<leader>", "s"],
+            "commands": ["workbench.action.debug.stop"],
+        },
+        {
+            "before": ["<leader>", "r"],
+            "commands": ["workbench.action.debug.run"],
+        },
+
+        // Terminal
+        {
+            "before": ["<leader>", "t", "h"],
+            "commands": ["workbench.action.terminal.new"],
+        },
+        {
+            "before": ["<leader>", "t", "t"],
+            "commands": ["workbench.action.createTerminalEditor"],
+        },
+    ],
+
+    // --- JAVA & DEBUG SETTINGS ---
     "debug.autoExpandLazyVariables": "on",
     "java.debug.settings.showLogicalStructure": true,
-    "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "prettier.tabWidth": 4,
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "custom-ui-style.font.monospace": "Iosevka",
-    "workbench.iconTheme": "icons",
     "java.debug.settings.showStaticVariables": true,
+
+    // --- FORMATTERS ---
+    "prettier.tabWidth": 4,
+    "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    },
+    "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+    // --- THEME & TOKEN CUSTOMIZATIONS (RESTORED) ---
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorCustomizations": {
+        "[GitHub Dark Default]": {
+            "sideBar.background": "#0d1116",
+            "sideBarSectionHeader.background": "#0d1116",
+            "terminal.background": "#0d1116",
+            "terminal.border": "#0d1116",
+            "panel.background": "#0d1116",
+            "editorGroupHeader.tabsBackground": "#0d1116",
+            "tab.inactiveBackground": "#0d1116",
+        }
+    },
+    "workbench.iconTheme": "icons",
+    "workbench.productIconTheme": "jetbrains-product-icons",
     "custom-ui-style.background.opacity": 1,
-    "editor.allowVariableFonts": false,
-    "editor.fontVariations": "Regular",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
                 "scope": [
                     "comment",
-                    "comment.block",
-                    "comment.block.documentation",
-                    "comment.line",
-                    "comment.block.javadoc.java",
                     "constant",
-                    "constant.character",
-                    "constant.character.escape",
-                    "constant.numeric",
-                    "constant.numeric.integer",
-                    "constant.numeric.float",
-                    "constant.numeric.hex",
-                    "constant.numeric.octal",
-                    "constant.other",
-                    "constant.regexp",
-                    "constant.rgb-value",
-                    "emphasis",
                     "entity",
-                    "entity.name",
-                    "entity.name.class",
-                    "entity.name.function",
-                    "entity.name.method",
-                    "entity.name.section",
-                    "entity.name.selector",
-                    "entity.name.tag",
-                    "entity.name.type",
-                    "entity.other",
-                    "entity.other.attribute-name",
-                    "entity.other.inherited-class",
-                    "invalid",
-                    "invalid.deprecated",
-                    "invalid.illegal",
                     "keyword",
-                    "keyword.control",
-                    "keyword.operator",
-                    "keyword.operator.new",
-                    "keyword.operator.assignment",
-                    "keyword.operator.arithmetic",
-                    "keyword.operator.logical",
-                    "keyword.other",
-                    "markup",
-                    "markup.bold",
-                    "markup.changed",
-                    "markup.deleted",
-                    "markup.heading",
-                    "markup.inline.raw",
-                    "markup.inserted",
-                    "markup.italic",
-                    "markup.list",
-                    "markup.list.numbered",
-                    "markup.list.unnumbered",
-                    "markup.other",
-                    "markup.quote",
-                    "markup.raw",
-                    "markup.underline",
-                    "markup.underline.link",
-                    "meta",
-                    "meta.block",
-                    "meta.cast",
-                    "meta.class",
-                    "meta.function",
-                    "meta.function-call",
-                    "meta.preprocessor",
-                    "meta.return-type",
-                    "meta.selector",
-                    "meta.tag",
-                    "meta.type.annotation",
-                    "meta.type",
-                    "punctuation.definition.string.begin",
-                    "punctuation.definition.string.end",
-                    "punctuation.separator",
-                    "punctuation.separator.continuation",
-                    "punctuation.terminator",
                     "storage",
-                    "storage.modifier",
-                    "storage.type",
                     "string",
-                    "string.interpolated",
-                    "string.other",
-                    "string.quoted",
-                    "string.quoted.double",
-                    "string.quoted.other",
-                    "string.quoted.single",
-                    "string.quoted.triple",
-                    "string.regexp",
-                    "string.unquoted",
-                    "strong",
-                    "support",
-                    "support.class",
-                    "support.constant",
-                    "support.function",
-                    "support.other",
-                    "support.type",
-                    "support.type.property-name",
-                    "support.variable",
                     "variable",
-                    "variable.language",
-                    "variable.name",
-                    "variable.other",
-                    "variable.other.readwrite",
-                    "variable.parameter"
                 ],
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
+                "settings": { 
+                    "fontStyle": "", 
+                },
+            },
+        ],
     },
     "editor.semanticTokenColorCustomizations": {
         "enabled": true,
         "rules": {
-            "*": {
-                "fontStyle": ""
-            },
-            "method:java": {
-                "fontStyle": ""
-            },
-            "method.static:java": {
-                "fontStyle": ""
-            },
-            "method.public:java": {
-                "fontStyle": ""
-            }
-        }
+            "*:java": { "fontStyle": "" },
+        },
     },
-    "editor.stickyScroll.enabled": false,
-    "explorer.confirmDelete": false,
-    "terminal.integrated.initialHint": false,
-    "chat.agent.enabled": false,
-    "editor.allowVariableLineHeights": false,
-    "editor.detectIndentation": false,
-    "editor.experimentalGpuAcceleration": "on",
-    "editor.hover.delay": 250,
-    "editor.hover.hidingDelay": 250,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
-    "editor.scrollBeyondLastLine": false,
-    "files.eol": "\n",
-    "files.insertFinalNewline": true,
-    "workbench.hover.delay": 250,
-    "workbench.localHistory.maxFileEntries": 150,
-    "workbench.reduceMotion": "on",
-    "workbench.sash.hoverDelay": 250,
-    "workbench.tips.enabled": false,
-    "workbench.settings.showAISearchToggle": false,
-    "zenMode.hideLineNumbers": false,
-    "zenMode.fullScreen": false,
-    "search.showLineNumbers": true,
-    "search.smartCase": true,
-    "debug.console.closeOnEnd": true,
-    "scm.alwaysShowRepositories": true,
-    "scm.inputFontFamily": "Iosevka",
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.gpuAcceleration": "on",
-    "terminal.integrated.hideOnStartup": "always",
-    "telemetry.editStats.enabled": false,
-    "telemetry.feedback.enabled": false,
-    "telemetry.telemetryLevel": "off",
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.fontSize": 16,
-    "window.zoomLevel": -0.5,
-    "workbench.colorTheme": "Kanagawa Dragon",
-    "workbench.colorCustomizations": {
-        "[Kanagawa Dragon]": {
-            "editorSuggestWidget.background": "#181616",
-            "editorSuggestWidget.selectedBackground": "#282727"
-        }
-    }
+    "nerdtree.hideSidebarWhenOpenFile": false,
+    "nerdtree.alwaysShowSidebar": true,
+    "extensions.ignoreRecommendations": true,
 }
